@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { SearchContext } from '../../utils/context/searchContext';
 import { useState } from 'react';
+import HEADER from '../components/header/header';
 
 
 
@@ -13,9 +14,7 @@ function ROOT() {
 		<SearchContext.Provider
 			 value={{ searchRequest, setSearchRequest }}
 		>
-			 <header>
-				 navigation
-			 </header>
+			 <HEADER  />
 			 <main>
 				  <Outlet />
 			 </main>
