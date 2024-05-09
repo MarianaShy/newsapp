@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100;1,400;1,600;1,700;1,900&family=Ropa+Sans:ital@1&display=swap');
-/*
-@import url(./components/navbar/navbar.css);
-@import url(./components/page/page.css);
-@import url(./components/footer/footer.css);*/
 
 :root {
 	/* Light Theme Colors */
@@ -47,12 +43,7 @@ li{
 	list-style: none;
 }
 
-.main-flex{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-}
+
 body {
    margin: 0;
    min-width: 320px;
@@ -64,6 +55,11 @@ body {
 .content{
 	max-width: 1280px;
 	margin: 0 auto;
+}
+.loading{
+	text-align: center;
+	font-size: 3rem;
+	align-self: flex-start;
 }
 
 @media (min-width: 520px) {

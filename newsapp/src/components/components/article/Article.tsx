@@ -1,4 +1,5 @@
 import { newsProp } from "./article.types"
+import './article.css';
 
 
 const Article = (props:newsProp) => {

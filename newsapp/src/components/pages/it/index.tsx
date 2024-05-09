@@ -11,17 +11,17 @@ const IT = () => {
 	const [loading, setLoading] = useState(true);
 
 
-	const getNews = async() =>{
-		try{
-			setLoading(true);
-			 await fetch(`https://newsapi.org/v2/everything?q="internet+technologies"&sortBy="publishedAt"&language=en&apiKey=6046867fa79f4b379c70524289a2823b`)
-			 .then(res => res.json())
-			 .then(json => setNews(json.articles))
-			 setLoading(false);
-		}catch(err){
-			 console.error(err)
+	const getNews = async () => {
+		try {
+		  setLoading(true);
+		  const response = await fetch(`https://newsapi.org/v2/everything?q="internet+technologies"&sortBy="publishedAt"&language=en&apiKey=6046867fa79f4b379c70524289a2823b`);
+		  const data = await response.json();
+		  setNews(data.articles);
+		  setLoading(false);
+		} catch (err) {
+		  console.error(err);
 		}
-  }
+	 };
 
 
   useEffect(()=>{
@@ -30,9 +30,9 @@ const IT = () => {
 
 	
 	return (
-	<>
+		<>
 		{loading ? 
-		(<div>"Loading..."</div>) :
+		(<div className='loading'>Loading...</div>) :
 			<main className='main-page'>
 				<Page news={news} />
 				<RightSection news={news} />

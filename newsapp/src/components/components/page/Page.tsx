@@ -1,5 +1,6 @@
 import Article from "../article";
 import  { pageProp } from "./page.types"
+import "./page.css"
 
 
 const Page = (props:pageProp) => {

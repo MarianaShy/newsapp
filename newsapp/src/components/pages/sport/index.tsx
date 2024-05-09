@@ -32,7 +32,7 @@ const SPORT = () => {
 	return (
 	<>
 		{loading ? 
-		(<div>"Loading..."</div>) :
+		(<div className='loading'>Loading...</div>) :
 			<main className='main-page'>
 				<Page news={news} />
 				<RightSection news={news} />

@@ -6,7 +6,7 @@ import logo from "../../../assets/logo.png";
 import "../../../styles/header.style.css"
 
 
-function HEADER() {
+function Header() {
 
 	const { category } = useParams<{ category: string }>();
 	console.log("ID from URL:", category);
@@ -56,4 +56,4 @@ function HEADER() {
 }
 
 
-export default HEADER
+export default Header

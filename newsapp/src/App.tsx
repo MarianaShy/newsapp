@@ -1,5 +1,8 @@
 
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+
+
+
 import IT from './components/pages/it';
 import HOME from './components/pages/home';
 import SPORT from './components/pages/sport';
@@ -8,12 +11,12 @@ import ROOT from './components/pages/root'
 import SEARCH from './components/pages/search'
 
 
-
+import ErrorPage from './utils/error/error.page';
 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<ROOT/>}>
+        <Route path="/" element={<ROOT/>}  errorElement={<ErrorPage />}>
 			   <Route path="/" element={<HOME />} />
             <Route path="/it" element={<IT />} />
             <Route path="/sport" element={<SPORT />} />
