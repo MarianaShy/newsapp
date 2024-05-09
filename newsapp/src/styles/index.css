@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100;1,400;1,600;1,700;1,900&family=Ropa+Sans:ital@1&display=swap');
+/*
+@import url(./components/navbar/navbar.css);
+@import url(./components/page/page.css);
+@import url(./components/footer/footer.css);*/
+
+:root {
+	/* Light Theme Colors */
+	--background-color-light: #fff;
+	--background-color-additional-light: #ebebeb;
+	--text-color-light: #1b1b1b;
+	--emphasized-color-light: #e02e3d;
+ 
+	/* Dark Theme Colors */
+	--background-color-dark: #1b1b1b;
+	--background-color-additional-dark: #192841;
+	--text-color-dark: #ebebeb;
+	--emphasized-color-dark: #ff6f61;
+ }
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#root {
+	background-color:  var(--background-color-additional-light);
+	color: var(--text-color-light);
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+li{
+	list-style: none;
+}
+
+.main-flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+body {
+   margin: 0;
+   min-width: 320px;
+   min-height: 100vh;
+   width: 100%;
+	margin: 0 auto;
+	font-family: Poppins;
+}
+.content{
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+@media (min-width: 520px) {
+	html{
+		font-size: 16px;
+	}
+	
+}
+
+@media (min-width: 723px) {
+	
+}
+@media (min-width: 933px) {
+	html{
+		font-size: 18px;
+	}
+}
+@media (min-width: 1127px) {
+	html{
+		font-size: 20px;
+	}
+}

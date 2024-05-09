@@ -1,12 +1,11 @@
-import './App.css';
 
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import IT from './components/it';
-import HOME from './components/home';
-import SPORT from './components/sport';
-import POLITICS from './components/politics';
-import ROOT from './components/root'
-import SEARCH from './components/search'
+import IT from './components/pages/it';
+import HOME from './components/pages/home';
+import SPORT from './components/pages/sport';
+import POLITICS from './components/pages/politics';
+import ROOT from './components/pages/root'
+import SEARCH from './components/pages/search'
 
 
 

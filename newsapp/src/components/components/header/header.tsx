@@ -1,7 +1,9 @@
-
 import { NavLink } from 'react-router-dom';
-import logo from "../../../assets/logo.png"
 import { useParams } from 'react-router-dom';
+
+
+import logo from "../../../assets/logo.png";
+import "../../../styles/header.style.css"
 
 
 function HEADER() {

@@ -1,14 +1,11 @@
 .logo-img{
-	width: 100px;
-}
-
-header{
-	
-	background-color: white;
+	width: 5rem;
 }
 
 .header{
-	border-bottom: 4px solid #e02e3d;
+	background-color: var(--background-color-light);
+
+	border-bottom: 4px solid var(--emphasized-color-light);
 }
 .header-flex{
 	display: flex;
@@ -27,15 +24,30 @@ header{
 	align-items: center;
 }
 
-.navigation-flex{
+.navigation__flex{
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: space-between;
+	justify-content: center;
 	padding: 0.5rem;
 }
-.navigation-flex h3{
+
+.navigation__item{
+	text-align: center;
+
+}
+
+.navigation__item a {
+	width: 5rem;
+	font-size: 1.2rem;
+	display: block;
 	padding: 1rem;
+	text-decoration: none;
+	border-radius: 0.5rem;
+}
+
+.active {
+	background-color: var(--background-color-additional-light);
 }
 
 .cursor-pointer{
@@ -46,7 +58,7 @@ header{
 	html{
 		font-size: 16px;
 	}
-	.navigation-flex{
+	.navigation__flex{
 		flex-basis: content;
 	}
 }

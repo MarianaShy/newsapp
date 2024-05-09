@@ -1,4 +1,4 @@
-import { SearchContext } from '../../utils/context/searchContext';
+import { SearchContext } from '../../../utils/context/searchContext';
 import React, { useContext } from 'react';
 
 

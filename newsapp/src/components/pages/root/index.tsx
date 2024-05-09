@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { SearchContext } from '../../utils/context/searchContext';
+import { SearchContext } from '../../../utils/context/searchContext';
 import { useState } from 'react';
-import HEADER from '../components/header/header';
+import HEADER from '../../components/header/header';
 
 
 

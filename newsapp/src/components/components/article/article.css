@@ -1,0 +1,36 @@
+
+.article{
+	font-style:oblique;
+	text-align: center;
+	color: #1b1b1b;
+	text-decoration: none;
+}
+.article:hover{
+	text-decoration: underline;
+	color: #1b1b1b;
+
+}
+
+.article-img{
+	align-self: center;
+	max-width: 100%;
+	object-fit: cover;
+}
+.article-title{
+	padding: 0.5rem;
+}
+
+@media (min-width: 520px) {
+
+}
+
+@media (min-width: 723px) {
+	
+
+}
+@media (min-width: 933px) {
+
+}
+@media (min-width: 1127px) {
+
+}
