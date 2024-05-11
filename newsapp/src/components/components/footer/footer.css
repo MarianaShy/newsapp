@@ -1,0 +1,21 @@
+footer{
+	background-color:#F5F5F5;
+
+}
+.footer-flex{
+	padding: 2rem 0;
+	margin: 0 auto;
+	align-self: center;
+	text-align: center;
+	width: 100%;
+	font-size: 1.2rem;
+
+}
+.footer-flex a{
+	text-decoration: underline;
+	color: inherit
+}
+.footer-flex a:hover{
+	text-decoration: none;
+	color: var(--emphasized-color-light);
+}

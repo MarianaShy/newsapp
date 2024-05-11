@@ -1,0 +1,23 @@
+.home{
+	padding: 1rem;
+	font-style: oblique;
+}
+.home__title{
+text-align: center;
+padding: 0.5rem;
+font-size: 1.5rem;
+}
+.home__main-title{
+	text-align: center;
+	padding: 0.5rem;
+	font-size: 2rem;
+	}
+.home__text{
+	font-size: 1.2rem;
+text-align: justify;
+}
+.home li{
+	list-style:inside;
+	font-size: 1.2rem;
+
+}

@@ -28,7 +28,7 @@ function Header() {
                     </NavLink>
             </li>
 				<li className="navigation__item">
-                    <NavLink to="/it" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
+                    <NavLink to="/informational+technologies" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
                         IT
                     </NavLink>
             </li>

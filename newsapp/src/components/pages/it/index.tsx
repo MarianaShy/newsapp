@@ -11,10 +11,10 @@ const IT = () => {
 	const [loading, setLoading] = useState(true);
 
 
-	const getNews = async () => {
+	const getNews = async (url: string) => {
 		try {
 		  setLoading(true);
-		  const response = await fetch(`https://newsapi.org/v2/everything?q="internet+technologies"&sortBy="publishedAt"&language=en&apiKey=6046867fa79f4b379c70524289a2823b`);
+		  const response = await fetch(url);
 		  const data = await response.json();
 		  setNews(data.articles);
 		  setLoading(false);
@@ -24,8 +24,10 @@ const IT = () => {
 	 };
 
 
-  useEffect(()=>{
-		getNews()
+const leftNewsUrl = `https://newsapi.org/v2/everything?q="internet+technologies"&sortBy="publishedAt"&language=en&apiKey=6046867fa79f4b379c70524289a2823b`
+ 
+useEffect(()=>{
+		getNews(leftNewsUrl)
   },[""])
 
 	
@@ -35,7 +37,7 @@ const IT = () => {
 		(<div className='loading'>Loading...</div>) :
 			<main className='main-page'>
 				<Page news={news} />
-				<RightSection news={news} />
+				<RightSection  />
 			</main>
 		}
 	</>
