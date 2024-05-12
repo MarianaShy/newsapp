@@ -10,8 +10,8 @@ import "../../../styles/header.style.css"
 
 function Header() {
 	const { language, toggleLanguage } = useContext(LanguageContext);
-	const navMenuRef = useRef<HTMLElement | null>(null);
-	const burgerRef = useRef<HTMLElement | null>(null);
+	const navMenuRef = useRef<HTMLUListElement | null>(null);
+	const burgerRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
 		const navMenu = navMenuRef.current;
@@ -61,14 +61,14 @@ function Header() {
 			</div>
 				<ul  className="navigation__flex hidden" id="my-nav-menu" ref={navMenuRef}>
 				<li className="navigation__item">
-                    <NavLink to="/" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
+                  <NavLink to="/" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
                         Home
-                    </NavLink>
+                  </NavLink>
             </li>
 				<li className="navigation__item">
-                    <NavLink to="/informational+technologies" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
+                  <NavLink to="/informational+technologies" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
                         IT
-                    </NavLink>
+                  </NavLink>
             </li>
 				<li className="navigation__item">
                     <NavLink to="/sport" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
