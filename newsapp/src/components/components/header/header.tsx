@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useEffect, useContext } from 'react';
+import { LanguageContext } from '../../../utils/context/languageContext';
+
 
 
 import logo from "../../../assets/logo.png";
@@ -7,9 +9,37 @@ import "../../../styles/header.style.css"
 
 
 function Header() {
+	const { language, toggleLanguage } = useContext(LanguageContext);
 
-	const { category } = useParams<{ category: string }>();
-	console.log("ID from URL:", category);
+
+	useEffect(() => {
+		const navMenu = document.getElementById("my-nav-menu");
+		const burger = document.getElementById("burger");
+  
+		const handleBurgerClick = () => {
+			navMenu?.classList.toggle('hidden');
+		};
+  
+		const handleNavLinkClick = () => {
+			navMenu?.classList.add('hidden');
+		};
+  
+		burger?.addEventListener("click", handleBurgerClick);
+  
+		const navLinks = document.querySelectorAll('.navigation__link');
+		navLinks.forEach(link => {
+			link.addEventListener('click', handleNavLinkClick);
+		});
+  
+		return () => {
+			burger?.removeEventListener("click", handleBurgerClick);
+			navLinks.forEach(link => {
+			link.removeEventListener('click', handleNavLinkClick);
+			});
+		};
+  }, [""]);
+
+	
 
 
     return (
@@ -20,8 +50,15 @@ function Header() {
 				<img src={logo} alt="Blue letters NT on white background with vertical sign 'News Today'  in the middle" className="logo-img"></img>
 				<h1 className="title">News Today</h1>
 			</div>
+			<div >
+			<button onClick={toggleLanguage} className={`language-button ${language === 'en' ? 'sv' : 'en'}`} >{language === 'en' ? 'SV' : 'EN'}</button>
+
+			</div>
 			<nav className='navigation'>
-				<ul  className="navigation__flex">
+			<div className="nav-menu-burger" id="burger">
+				<i className="fa-solid fa-bars"></i>
+			</div>
+				<ul  className="navigation__flex hidden" id="my-nav-menu">
 				<li className="navigation__item">
                     <NavLink to="/" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
                         Home
@@ -48,10 +85,7 @@ function Header() {
 			</nav>
 		</div>
 		</div>
-		
-		
-		
-	</header>
+		</header>
     );
 }
 
