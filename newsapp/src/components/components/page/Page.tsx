@@ -15,7 +15,9 @@ const Page = (props:pageProp) => {
 
 	return (
 		<div className="left-article-flex">
+			
 			<h2 className="right-article-flex__title"><span className='emphasized'>/  </span>{url}</h2>
+			{props.news?.length > 0 ? (
 			<ul>
 					{props?.news?.map((data:NewsItem) => {
 						if(data?.title && data?.urlToImage){
@@ -28,7 +30,10 @@ const Page = (props:pageProp) => {
 							}
 						}
 					})}
-				</ul>
+			</ul>
+			   ) : (
+				<p>    No results have been found</p>)}
+		  
 		</div>
 
 				

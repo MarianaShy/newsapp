@@ -107,7 +107,6 @@ background-color: var(--background-color-additional-light);
 		flex-direction: row;
 		width: 100%;
 		justify-content: center;
-		padding: 0.5rem;
 		position: inherit;
 		border-top: none;
 		background-color: var(--background-color-light);
@@ -126,7 +125,6 @@ background-color: var(--background-color-additional-light);
 	width: 4rem;
 	font-size: 1.2rem;
 	display: block;
-	padding: 1rem;
 	text-decoration: none;
 	border-radius: 0.5rem;
 }

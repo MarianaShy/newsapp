@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useRef } from 'react';
 import { LanguageContext } from '../../../utils/context/languageContext';
 
 
@@ -10,11 +10,12 @@ import "../../../styles/header.style.css"
 
 function Header() {
 	const { language, toggleLanguage } = useContext(LanguageContext);
-
+	const navMenuRef = useRef<HTMLElement | null>(null);
+	const burgerRef = useRef<HTMLElement | null>(null);
 
 	useEffect(() => {
-		const navMenu = document.getElementById("my-nav-menu");
-		const burger = document.getElementById("burger");
+		const navMenu = navMenuRef.current;
+        const burger = burgerRef.current;
   
 		const handleBurgerClick = () => {
 			navMenu?.classList.toggle('hidden');
@@ -55,10 +56,10 @@ function Header() {
 
 			</div>
 			<nav className='navigation'>
-			<div className="nav-menu-burger" id="burger">
+			<div className="nav-menu-burger" id="burger" ref={burgerRef}>
 				<i className="fa-solid fa-bars"></i>
 			</div>
-				<ul  className="navigation__flex hidden" id="my-nav-menu">
+				<ul  className="navigation__flex hidden" id="my-nav-menu" ref={navMenuRef}>
 				<li className="navigation__item">
                     <NavLink to="/" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
                         Home

@@ -22,7 +22,6 @@ const router = createBrowserRouter(
             <Route path="/sport" element={<SPORT />} />
             <Route path="/politics" element={<POLITICS />} />
 				<Route path="/search" element={<SEARCH />} />
-
         </Route>
     )
 );
