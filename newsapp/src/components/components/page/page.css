@@ -75,7 +75,6 @@
 	}
 	.left-article-flex{
 		flex-basis: 70%;
-		align-self: center;
 	}
 }
 @media (min-width: 933px) {

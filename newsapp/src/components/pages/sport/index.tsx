@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useContext, useMemo } from 'react'
 
 
 
@@ -41,7 +41,8 @@ const SPORT = () => {
 		getNews(sportNewsUrl)
   },[language])
 
-	
+  const memoizedRightSection = useMemo(() => <RightSection />, []); 
+
 	return (
 	<>
 		{loading ? 
@@ -51,7 +52,7 @@ const SPORT = () => {
 			) :
 			<main className='main-page'>
 				<Page news={news} />
-				<RightSection  />
+				{memoizedRightSection}
 		</main>
 		}
 	</>

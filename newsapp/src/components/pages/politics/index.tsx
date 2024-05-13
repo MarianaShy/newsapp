@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useContext, useMemo } from 'react'
 
 
 
@@ -36,13 +36,15 @@ const POLITICS = () => {
 		} 
 	};
 
-  const politicsNewsUrl = `https://newsapi.org/v2/everything?q="politic"&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
+  const politicsNewsUrl = `https://newsapi.org/v2/everything?q="politics"&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
 
   useEffect(()=>{
 		getNews(politicsNewsUrl)
   },[language])
 
-	
+  const memoizedRightSection = useMemo(() => <RightSection />, []); 
+
+
   return (
 	<>
 		{loading ? 
@@ -52,7 +54,7 @@ const POLITICS = () => {
 			) :
 			<main className='main-page'>
 				<Page news={news} />
-				<RightSection  />
+				{memoizedRightSection}
 		</main>
 		}
 	</>

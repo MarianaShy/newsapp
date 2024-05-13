@@ -62,6 +62,7 @@ body {
 .message-to-user{
 	text-align: center;
 	font-size: 2rem;
+	padding: 1rem;
 	align-self: flex-start;
 }
 

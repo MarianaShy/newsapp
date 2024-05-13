@@ -62,7 +62,7 @@ function Header() {
 				<ul  className="navigation__flex hidden" id="my-nav-menu" ref={navMenuRef}>
 				<li className="navigation__item">
                   <NavLink to="/" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
-                        Home
+						{language === 'en' ? 'Home' : 'Hem'}
                   </NavLink>
             </li>
 				<li className="navigation__item">
@@ -77,7 +77,7 @@ function Header() {
             </li>
 				<li className="navigation__item">
                     <NavLink to="/politics" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
-                        Politics
+						  {language === 'en' ? 'Politics' : 'Politik'} 
                     </NavLink>
             </li>
 

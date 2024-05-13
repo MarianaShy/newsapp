@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import {useMemo} from 'react';
 
 
 
@@ -8,10 +9,18 @@ import "./page.css"
 
 
 const Page = (props:pageProp) => {
-
 	let count = 0
 	const location = useLocation();
-	const url = location.pathname.slice(1).split('+').map((word, index) => index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word).join(' ');;
+
+
+	const url = useMemo(() => {
+		return location.pathname
+			.slice(1)
+			.split('+')
+			.map((word, index) => index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word)
+			.join(' ');
+   }, [location.pathname]);
+	
 
 	return (
 		<div className="left-article-flex">
@@ -33,7 +42,6 @@ const Page = (props:pageProp) => {
 			</ul>
 			   ) : (
 				<p>    No results have been found</p>)}
-		  
 		</div>
 
 				
