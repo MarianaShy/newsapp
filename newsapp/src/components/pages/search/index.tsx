@@ -37,7 +37,7 @@ SearchContext
 	};
 
 
-const searchNewsUrl = `https://newsapi.org/v2/everything?q=${searchRequest ? searchRequest : "newest in the world"}&sortBy="publishedAt"&language=${language}&apiKey=f942e7c539514faf9676e0f3976189c5`
+const searchNewsUrl = `https://newsapi.org/v2/everything?q=${searchRequest ? searchRequest : "newest in the world"}&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
 useEffect(()=>{
 		getNews(searchNewsUrl)
   },[language, searchRequest])

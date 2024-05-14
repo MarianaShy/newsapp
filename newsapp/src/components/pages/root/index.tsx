@@ -31,7 +31,7 @@ function ROOT() {
 		<SearchContext.Provider
 			 value={{ searchRequest, setSearchRequest }}>
 			 <Header  />
-			 <main>
+			 <main className='content'>
 				  <Outlet />
 			 </main>
 			 <Footer />
