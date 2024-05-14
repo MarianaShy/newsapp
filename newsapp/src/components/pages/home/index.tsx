@@ -6,6 +6,7 @@ import { LanguageContext } from '../../../utils/context/languageContext';
 
 function HOME() {
 	const { language } = useContext(LanguageContext);
+	console.log("home")
 	return (
 		<>
 		{language==="en" ? 

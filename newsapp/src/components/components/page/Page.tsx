@@ -24,7 +24,7 @@ const Page = (props:pageProp) => {
 			.map((word, index) => index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word)
 			.join(' ');
    }, [location.pathname]);
-	
+	console.log("page")
 
 	return (
 		<div className="left-article-flex">
@@ -33,9 +33,9 @@ const Page = (props:pageProp) => {
 			<ul className='articles'>
 					{props?.news?.map((data:NewsItem) => {
 						if(data?.title && data?.urlToImage){
-							if(count < 10){
+							if(data){
 								count++
-								const id = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+								const id = count;
 								return <>
 									<Article news={data} id={id}/>
 								</>

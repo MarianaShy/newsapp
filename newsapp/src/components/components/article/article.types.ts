@@ -4,6 +4,6 @@ export interface newsProp {
 		title: string;
 		url: string;
 	}
-	id: string
+	id: number
 }
 

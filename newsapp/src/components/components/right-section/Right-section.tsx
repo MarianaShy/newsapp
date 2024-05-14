@@ -31,7 +31,7 @@ const worldNewsUrl = `https://newsapi.org/v2/everything?q="world"&sortBy="publis
 useEffect(()=>{
 		getNews(worldNewsUrl)
   },[language])
-
+console.log("right")
 	return (
 		<aside>
 		<SearchForm />
@@ -41,9 +41,9 @@ useEffect(()=>{
 			<ul>
 					{news?.map((data: NewsItem) => {
 						if(data?.title && data?.urlToImage){
-							if(count < 10){
+							if(data){
 								count++;
-								const id = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+								const id = count;
 								return <>
 									<Article news={data} id={id}/>
 								</>
