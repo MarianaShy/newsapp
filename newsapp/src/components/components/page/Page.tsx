@@ -27,7 +27,7 @@ const Page = (props:pageProp) => {
 
 	return (
 		<div className="left-article-flex">
-			<h2 className="left-article-flex__title"><span className='emphasized'>/  </span>{url==="Search" ? url  + " for " + searchRequest : url}</h2>
+			<h2 className="left-article-flex__title"><span className='emphasized'>/  </span>{url==="Search" ? url  + " for " + searchRequest + " news " : url}</h2>
 			{props.news?.length > 0 ? (
 			<ul className='articles'>
 					{props?.news?.map((data:NewsItem) => {
