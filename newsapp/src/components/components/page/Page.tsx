@@ -24,7 +24,6 @@ const Page = (props:pageProp) => {
 			.map((word, index) => index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word)
 			.join(' ');
    }, [location.pathname]);
-	console.log("page")
 
 	return (
 		<div className="left-article-flex">

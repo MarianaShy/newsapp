@@ -31,7 +31,6 @@ const worldNewsUrl = `https://newsapi.org/v2/everything?q="world"&sortBy="publis
 useEffect(()=>{
 		getNews(worldNewsUrl)
   },[language])
-console.log("right")
 	return (
 		<aside>
 		<SearchForm />
