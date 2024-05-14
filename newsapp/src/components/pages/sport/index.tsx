@@ -53,7 +53,7 @@ const SPORT = () => {
 			<main className='main-page'>
 				<Page news={news} />
 				{memoizedRightSection}
-		</main>
+				</main>
 		}
 	</>
 	)

@@ -30,7 +30,7 @@ const Page = (props:pageProp) => {
 		<div className="left-article-flex">
 			<h2 className="left-article-flex__title"><span className='emphasized'>/  </span>{url==="Search" ? url  + " for " + searchRequest : url}</h2>
 			{props.news?.length > 0 ? (
-			<ul>
+			<ul className='articles'>
 					{props?.news?.map((data:NewsItem) => {
 						if(data?.title && data?.urlToImage){
 							if(count < 10){
