@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import './home.css'
 import { LanguageContext } from '../../../utils/context/languageContext';
 
-					import Article from "../../components/article/Article";
+					import Article from "../../components/article/Article2";
 
 					interface NewsItem {
 						title: string;
