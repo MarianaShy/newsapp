@@ -2,7 +2,7 @@
 
 export interface NewsItem {
 	title: string;
-	urlToImage: string;
+	image: string;
 	url: string
 	
 }

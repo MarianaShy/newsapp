@@ -36,7 +36,7 @@ const POLITICS = () => {
 		} 
 	};
 
-  const politicsNewsUrl = `https://newsapi.org/v2/everything?q="politics"&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
+  const politicsNewsUrl = `https://gnews.io/api/v4/search?q=politics&lang=${language}&country=us&max=10&apikey=3bdcdeac262193d5961f84b88e87d854`
 
   useEffect(()=>{
 		getNews(politicsNewsUrl)

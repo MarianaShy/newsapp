@@ -31,7 +31,7 @@ const Page = (props:pageProp) => {
 			{props.news?.length > 0 ? (
 			<ul className='articles'>
 					{props?.news?.map((data:NewsItem) => {
-						if(data?.title && data?.urlToImage){
+						if(data?.title && data?.image){
 							if(data){
 								count++
 								const id = count;

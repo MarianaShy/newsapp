@@ -26,7 +26,7 @@ const RightSection = () => {
 	 };
 
 
-const worldNewsUrl = `https://newsapi.org/v2/everything?q="world"&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
+const worldNewsUrl = `https://gnews.io/api/v4/search?q=world&lang=${language}&country=us&max=10&apikey=3bdcdeac262193d5961f84b88e87d854`
  
 useEffect(()=>{
 		getNews(worldNewsUrl)
@@ -39,7 +39,7 @@ useEffect(()=>{
 			<h3 className="right-article-flex__title"><span className='emphasized'>/  </span>World news</h3>
 			<ul>
 					{news?.map((data: NewsItem) => {
-						if(data?.title && data?.urlToImage){
+						if(data?.title && data?.image){
 							if(data){
 								count++;
 								const id = count;

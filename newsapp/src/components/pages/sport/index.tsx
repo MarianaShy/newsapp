@@ -35,7 +35,7 @@ const SPORT = () => {
 		} 
 	};
 
-  const sportNewsUrl = `https://newsapi.org/v2/everything?q="sport"&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
+  const sportNewsUrl = `https://gnews.io/api/v4/top-headlines?category=sports&lang=${language}&country=us&max=10&apikey=3bdcdeac262193d5961f84b88e87d854`
 
   useEffect(()=>{
 		getNews(sportNewsUrl)

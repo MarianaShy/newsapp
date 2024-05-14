@@ -1,70 +1,23 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 
 import './home.css'
 import { LanguageContext } from '../../../utils/context/languageContext';
 
-					import Article from "../../components/article/Article2";
-
-					interface NewsItem {
-						title: string;
-						image: string;
-						url: string
-						
-					}
-
 
 function HOME() {
-            let count = 0
-				const [news, setNews] = useState([])
 
 
 	const { language } = useContext(LanguageContext);
 
 	
-
-
-
-							const getNews = async (url: string) => {
-								try {
-								const response = await fetch(url);
-								const data = await response.json();
-								setNews(data.articles);
-								console.log(news)
-								} catch (err) {
-								console.error(err);
-								}
-							};
-
-
-								const worldNewsUrl = `https://gnews.io/api/v4/search?q=test&lang=en&country=us&max=10&apikey=5f785052f9abd9d50950c63ddb19c7ed`
 								
-								useEffect(()=>{
-										getNews(worldNewsUrl)
-								},[language])
-									
+							
 
 	return (
 		<>
 		{language==="en" ? 
 		(<div className="home content">
 		<h2 className="home__main-title">Welcome to <span className='emphasized'>NewsToday!</span></h2>
-								<div className="right-article-flex">
-									
-									<h3 className="right-article-flex__title"><span className='emphasized'>/  </span>World news</h3>
-									<ul>
-											{news?.map((data: NewsItem) => {
-												if(data?.title && data?.image){
-													if(data){
-														count++;
-														const id = count;
-														return <>
-															<Article news={data} id={id}/>
-														</>
-													}
-												}
-											})}
-										</ul>
-								</div>
 		<section>
 			<p className="home__text">Welcome to NewsApp, your go-to destination for the latest news updates from around the world! Whether you're interested in politics, sports, or informational technologies, we've got you covered.
 			</p>

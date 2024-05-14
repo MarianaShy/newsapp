@@ -1,6 +1,6 @@
 export interface newsProp {
 	news: {
-		urlToImage: string;
+		image: string;
 		title: string;
 		url: string;
 	}

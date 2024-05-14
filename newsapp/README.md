@@ -31,4 +31,7 @@ export default {
 
 
 
-f942e7c539514faf9676e0f3976189c5
+
+https://gnews.io/api/v4/search?q=test&lang=en&country=us&max=10&apikey=5f785052f9abd9d50950c63ddb19c7ed
+
+3bdcdeac262193d5961f84b88e87d854
