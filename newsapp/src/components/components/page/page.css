@@ -3,7 +3,7 @@
 .current-page-title{
 	background-color: #F5F5F5;
 	padding: 1rem 0 1rem 0;
-	width: 100%;
+	max-width: 100%;
 }
 .current-page-title span{
 	color: #e02e3d;
@@ -13,10 +13,9 @@
 .left-article-flex{
 	align-self: flex-start;
 	display: flex;
-	width: 90%;
+	width: 100%;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	padding: 1rem;
 }
 .right-article-flex{
 	display: none;
@@ -35,7 +34,9 @@
 	display:flex;
 	max-width: 1280px;
 	margin: 0 auto;
-	flex-direction: column;
+	flex-direction: column-reverse;
+	max-width: 100%;
+	padding: 0.5rem;
 }
 .emphasized {
 	color: var(--emphasized-color-light);
@@ -46,9 +47,16 @@
 	padding: 1rem;
 	display: block;
 	background-color: #F5F5F5;
-	width: 100%;
+	max-width: 100%;
 	border-radius: 0.2rem;
 	}
+.left-article-flex__title{
+		padding: 1rem;
+		display: block;
+		background-color: #F5F5F5;
+		width: 100%;
+		border-radius: 0.2rem;
+		}
 
 
 
@@ -61,20 +69,27 @@
 @media (min-width: 723px) {
 	.main-page{
 		display:flex;
+		justify-content: space-around;
 		flex-direction: row;
-		width: 100%;
+		max-width: 100%;
+		padding: 1rem;
 	}
-	.right-article-flex{
+	aside{
 		display: flex;
 		flex-wrap: wrap;
-		padding: 1rem;
-		max-width: 900px;
-		margin: 0 auto;
-		flex-basis: 30%;
+		padding: 0.5rem;
+		max-width: 1280px;
+		margin: 0;
 		height: fit-content;
+		max-width: 30%;
+	}
+	.right-article-flex{
+		display: block;
 	}
 	.left-article-flex{
-		flex-basis: 70%;
+		margin: 0;
+		padding: 0.5rem;
+		max-width: 70%;
 	}
 }
 @media (min-width: 933px) {

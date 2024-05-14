@@ -2,7 +2,7 @@ import Article from "../article/Article";
 import { NewsItem } from "../page/page.types";
 import { useEffect, useState, useContext } from 'react'
 import { LanguageContext } from '../../../utils/context/languageContext';
-import SearchForm from "../search/search";
+import SearchForm from "../search-form/search-form";
 
 
 
@@ -33,8 +33,10 @@ useEffect(()=>{
   },[language])
 
 	return (
+		<aside>
+		<SearchForm />
 		<div className="right-article-flex">
-			<SearchForm />
+			
 			<h3 className="right-article-flex__title"><span className='emphasized'>/  </span>World news</h3>
 			<ul>
 					{news?.map((data: NewsItem) => {
@@ -50,6 +52,7 @@ useEffect(()=>{
 					})}
 				</ul>
 		</div>
+		</aside>
 	)
 	
 }

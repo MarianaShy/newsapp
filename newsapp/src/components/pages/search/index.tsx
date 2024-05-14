@@ -11,7 +11,7 @@ import { SearchContext } from '../../../utils/context/searchContext';
 
 const SEARCH = () => {
 	
-	const [news, setNews] = useState([])
+	const [news, setNews] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const { language } = useContext(LanguageContext);
 	const [error, setError] = useState<string | null>(null);
@@ -37,7 +37,7 @@ SearchContext
 	};
 
 
-const searchNewsUrl = `https://newsapi.org/v2/everything?q=${searchRequest ? searchRequest : "newest in the world"}&sortBy="publishedAt"&language=${language}&apiKey=6046867fa79f4b379c70524289a2823b`
+const searchNewsUrl = `https://newsapi.org/v2/everything?q=${searchRequest ? searchRequest : "newest in the world"}&sortBy="publishedAt"&language=${language}&apiKey=f942e7c539514faf9676e0f3976189c5`
 useEffect(()=>{
 		getNews(searchNewsUrl)
   },[language, searchRequest])
@@ -63,9 +63,6 @@ useEffect(()=>{
 	)
 	
 }
-
-
-
 
 
 export default SEARCH;

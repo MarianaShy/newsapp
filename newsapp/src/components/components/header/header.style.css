@@ -84,11 +84,11 @@ background-color: var(--background-color-additional-light);
 	}
 .en{
 	
-	background-image: url(../assets/uk-flag-1444045.jpg);
+	background-image: url(../../../assets/uk-flag-1444045.jpg);
 }
 .sv{
 
-	background-image: url(../assets/sweden-flag.jpg);
+	background-image: url(../../../assets/sweden-flag.jpg);
 }
 
 @media (min-width: 520px) {

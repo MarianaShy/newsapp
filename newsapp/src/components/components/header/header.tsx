@@ -5,7 +5,7 @@ import { LanguageContext } from '../../../utils/context/languageContext';
 
 
 import logo from "../../../assets/logo.png";
-import "../../../styles/header.style.css"
+import "./header.style.css"
 
 
 function Header() {
