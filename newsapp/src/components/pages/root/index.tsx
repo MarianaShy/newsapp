@@ -9,7 +9,7 @@ import Footer from '../../components/footer/footer'
 
 function ROOT() {
 	
-	const [ searchRequest, setSearchRequest ] = useState<string>("Test");
+	const [ searchRequest, setSearchRequest ] = useState<string>("culture");
 
 	const [language, setLanguage] = useState<string>(() => {
 		const storedLanguage = localStorage.getItem('language');
