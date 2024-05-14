@@ -3,7 +3,6 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 
 
 
-import IT from './components/pages/it';
 import HOME from './components/pages/home';
 import SPORT from './components/pages/sport';
 import POLITICS from './components/pages/politics';
@@ -18,7 +17,6 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<ROOT/>}  errorElement={<ErrorPage />}>
 			   <Route path="/" element={<HOME />} />
-            <Route path="/informational+technologies" element={<IT />} />
             <Route path="/sport" element={<SPORT />} />
             <Route path="/politics" element={<POLITICS />} />
 				<Route path="/search" element={<SEARCH />} />

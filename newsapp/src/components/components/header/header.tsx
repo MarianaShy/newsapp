@@ -48,7 +48,7 @@ function Header() {
 		<div className="header">
 			<div className="content header-flex">
 			<div className="header-title">
-				<img src={logo} alt="Blue letters NT on white background with vertical sign 'News Today'  in the middle" className="logo-img"></img>
+				<img src={logo} alt="NT" className="logo-img"></img>
 				<h1 className="title">News Today</h1>
 			</div>
 			<div >
@@ -66,8 +66,8 @@ function Header() {
                   </NavLink>
             </li>
 				<li className="navigation__item">
-                  <NavLink to="/informational+technologies" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
-                        IT
+                  <NavLink to="/search" className={({ isActive }) => `navigation__link ${isActive ? 'active' : ''}`} >
+                        {language === 'en' ? 'Search' : 'Sök'}
                   </NavLink>
             </li>
 				<li className="navigation__item">

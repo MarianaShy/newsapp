@@ -49,7 +49,7 @@ function HOME() {
 	</div>) :
 		
 		(<div className="home content">
-		<h2 className="home__main-title">Välkommen till <span className='emphasized'>NyheterIdag!</span></h2>
+		<h2 className="home__main-title">Välkommen till <span className='emphasized'>NewsToday!</span></h2>
 			<section>
 				<p className="home__text">Välkommen till Nyhetsappen, din destination för de senaste nyhetsuppdateringarna från hela världen! Oavsett om du är intresserad av politik, sport eller informationsteknik har vi dig täckt.
 				</p>
